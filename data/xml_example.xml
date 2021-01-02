@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edda>
+  <character>
+    <name>Thor</name>
+    <parents>
+      <father>
+        <name>Odin</name>
+        <weapon>Gungnir</weapon>
+      </father>
+      <mother>
+        <name>Jord</name>
+      </mother>
+    </parents>
+    <weapon>Mjölnir</weapon>
+  </character>
+  <character>
+    <name>Loki</name>
+    <parents>
+      <father>
+        <name>Farbauti</name>
+      </father>
+      <mother>
+        <name>Laufey</name>
+      </mother>
+    </parents>
+  </character>
+</edda>
