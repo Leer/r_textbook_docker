@@ -1,0 +1,29 @@
+image: rocker/verse:latest
+
+variables:
+  DOCKER_DRIVER: "overlay2"
+  GIT_SUBMODULE_STRATEGY: "recursive"
+  R_LIBS: "${CI_PROJECT_DIR}/ci/R/library"
+  # R_PKGS: data.table lubridate rvest plotly profvis microbenchmark haven foreign openxlsx readxl jsonlite xml2 glue XML lobstr foreach doParallel Rcpp dplyr pryr ggplot2 lme4 bench futile.logger
+  APT_PKGS: libssl-dev bzip2
+
+cache:
+  key: ${CI_JOB_NAME}
+  paths:
+    - ${R_LIBS}
+
+before_script:
+  - mkdir -p ${R_LIBS}
+  - apt-get update
+  - apt-get install --no-install-recommends -y ${APT_PKGS}
+  - Rscript -e 'remotes::install_cran(commandArgs(TRUE))' ${R_PKGS}
+
+pages:
+  stage: deploy
+  script:
+  - Rscript -e "bookdown::render_book('index.Rmd', 'all', output_dir = 'public')"
+  artifacts:
+    paths:
+    - public
+  only:
+  - master

@@ -1,0 +1,20 @@
+--- 
+title: "Short introduction into R programming language"
+author: "Ph.A.Upravitelev "
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: ['bibliography.bib', 'packages.bib']
+biblio-style: apalike
+link-citations: yes
+lang: ru-RU
+---
+
+# Intro
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```

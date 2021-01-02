@@ -1,0 +1,13 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      before: |
+        <li>R programming language</li>
+      after: null
+      scroll_highlight: yes
+    # download: ["pdf", "epub"]
+    toolbar:
+      position: fixed
+  #bookdown::epub_book: default
+  #bookdown::pdf_book: default
