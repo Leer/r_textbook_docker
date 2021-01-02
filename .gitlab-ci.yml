@@ -4,7 +4,7 @@ variables:
   DOCKER_DRIVER: "overlay2"
   GIT_SUBMODULE_STRATEGY: "recursive"
   R_LIBS: "${CI_PROJECT_DIR}/ci/R/library"
-  # R_PKGS: data.table lubridate rvest plotly profvis microbenchmark haven foreign openxlsx readxl jsonlite xml2 glue XML lobstr foreach doParallel Rcpp dplyr pryr ggplot2 lme4 bench futile.logger
+  R_PKGS: Rcpp reticulate rJava RSQLite
   APT_PKGS: libssl-dev bzip2
 
 cache:
