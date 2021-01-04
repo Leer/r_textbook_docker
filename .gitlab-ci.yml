@@ -24,13 +24,14 @@ cache:
 before_script:
   - mkdir -p ${R_LIBS}
   - apt-get update
-  - apt-get install --no-install-recommends -y ${APT_PKGS}
-  - Rscript -e 'remotes::install_cran(commandArgs(TRUE))' ${R_PKGS}
+  # - apt-get install --no-install-recommends -y ${APT_PKGS}
+  # - Rscript -e 'remotes::install_cran(commandArgs(TRUE))' ${R_PKGS}
+  - pwd
 
 pages:
   stage: deploy
   script:
-  - Rscript -e "bookdown::render_book('index.Rmd', 'all', output_dir = 'public')"
+  # - Rscript -e "bookdown::render_book('index.Rmd', 'all', output_dir = 'public')"
   artifacts:
     paths:
     - public
