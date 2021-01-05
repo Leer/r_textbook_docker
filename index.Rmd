@@ -20,6 +20,13 @@ knitr::write_bib(c(
 ```
 
 
-```{r, setup, include=FALSE}
+```{r}
 knitr::opts_knit$set(root.dir = getwd())
 ```
+
+
+```{r}
+getwd()
+```
+
+

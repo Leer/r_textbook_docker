@@ -4,7 +4,7 @@ variables:
   DOCKER_DRIVER: "overlay2"
   GIT_SUBMODULE_STRATEGY: "recursive"
   R_LIBS: "${CI_PROJECT_DIR}/ci/R/library"
-  R_PKGS: lubridate
+  R_PKGS: lubridate profvis data.table
   APT_PKGS: libssl-dev
 
 cache:
