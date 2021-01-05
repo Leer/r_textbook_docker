@@ -5,15 +5,15 @@ variables:
   GIT_SUBMODULE_STRATEGY: "recursive"
   R_LIBS: "${CI_PROJECT_DIR}/ci/R/library"
   R_PKGS: reshape2
-    pryr lobstr plotly
-    ggplot2
-    readxl openxlsx haven jsonlite xml2 glue XML
-    data.table R6
-    microbenchmark bench profvis foreach doParallel
-    futile.logger
+    # pryr lobstr plotly
+    # ggplot2
+    # readxl openxlsx haven jsonlite xml2 glue XML
+    # data.table R6
+    # microbenchmark bench profvis foreach doParallel
+    # futile.logger
     lubridate
-    dplyr
-    Rcpp reticulate rJava RSQLite
+    # dplyr
+    # Rcpp reticulate rJava RSQLite
   APT_PKGS: libssl-dev
 
 cache:
@@ -26,12 +26,11 @@ before_script:
   - apt-get update
   # - apt-get install --no-install-recommends -y ${APT_PKGS}
   # - Rscript -e 'remotes::install_cran(commandArgs(TRUE))' ${R_PKGS}
-  - pwd
 
 pages:
   stage: deploy
   script:
-  # - Rscript -e "bookdown::render_book('index.Rmd', 'all', output_dir = 'public')"
+  - Rscript -e "bookdown::render_book('index.Rmd', 'all', output_dir = 'public')"
   artifacts:
     paths:
     - public

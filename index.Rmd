@@ -18,3 +18,8 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```
+
+
+```{r, setup, include=FALSE}
+knitr::opts_knit$set(root.dir = getwd())
+```
