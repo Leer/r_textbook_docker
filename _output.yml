@@ -1,4 +1,11 @@
+bookdown::bs4_book:
+  theme:
+    # primary: "#544154"
+    primary: "#0068D9"
+
 bookdown::gitbook:
+  split_by: chapter
+  split_bib: yes
   css: style.css
   config:
     toc:
@@ -6,8 +13,5 @@ bookdown::gitbook:
         <li>R programming language</li>
       after: null
       scroll_highlight: yes
-    # download: ["pdf", "epub"]
     toolbar:
       position: fixed
-  #bookdown::epub_book: default
-  #bookdown::pdf_book: default
