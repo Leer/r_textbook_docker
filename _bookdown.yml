@@ -1,6 +1,5 @@
 book_filename: "r_textbook"
 delete_merged_file: true
-# rmd_subdir: './chapters'
 new_session: yes
 output_dir: "book-output"
 language:

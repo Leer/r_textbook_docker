@@ -1,30 +1,26 @@
 --- 
-title: "Short introduction into R programming language"
-author: "Ph.A.Upravitelev "
+#title: "Short introduction into R programming language"
+title: "Введение в язык программирования R"
+author: 'Ph.A.Upravitelev '
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
+# output: word_document
+output: bookdown::bs4_book
 documentclass: book
-bibliography: ['bibliography.bib', 'packages.bib']
+bibliography:
+- bibliography.bib
+- packages.bib
 biblio-style: apalike
 link-citations: yes
-lang: ru-RU
+lang: en-EN
+site: bookdown::bookdown_site
 ---
 
 # Intro
 
-```{r include=FALSE}
+```{r index-1, include=FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
-```
-
-
-```{r}
 knitr::opts_knit$set(root.dir = getwd())
-```
-
-
-```{r}
-getwd()
 ```
