@@ -1,4 +1,5 @@
 bookdown::bs4_book:
+  repo: https://gitlab.com/upravitelev/r_textbook_docker
   theme:
     # primary: "#544154"
     primary: "#0068D9"
